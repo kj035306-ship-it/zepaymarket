@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ZepayMarkkt</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>ZepayMarkkt 🛒</h1>
+    <button onclick="toggleView('shop')">Shop</button>
+    <button onclick="toggleView('seller')">Seller</button>
+    <button onclick="toggleView('admin')">Admin</button>
+  </header>
+
+  <!-- SHOP VIEW -->
+  <section id="shopView">
+    <h2>Marketplace</h2>
+    <div id="products"></div>
+  </section>
+
+  <!-- SELLER VIEW -->
+  <section id="sellerView" class="hidden">
+    <h2>Seller Dashboard</h2>
+
+    <div id="sellerAuth">
+      <input id="sellerName" placeholder="Shop Name" />
+      <input id="sellerPhone" placeholder="Phone" />
+      <button onclick="paySubscription()">Pay Subscription</button>
+    </div>
+
+    <div id="sellerPanel" class="hidden">
+      <h3>Upload Product</h3>
+      <input id="pName" placeholder="Product Name" />
+      <input id="pPrice" placeholder="Price" />
+      <button onclick="addProduct()">Upload</button>
+
+      <h3>Your Products</h3>
+      <div id="myProducts"></div>
+    </div>
+  </section>
+
+  <!-- ADMIN VIEW -->
+  <section id="adminView" class="hidden">
+    <h2>Admin Panel</h2>
+    <div id="orders"></div>
+  </section>
+
+  <script src="config.js"></script>
+  <script src="supabase.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
