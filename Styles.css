@@ -1,0 +1,26 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f4f4f4;
+}
+
+header {
+  background: black;
+  color: white;
+  padding: 10px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+#products div {
+  background: white;
+  margin: 10px;
+  padding: 10px;
+}
